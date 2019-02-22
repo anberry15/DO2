@@ -1,0 +1,6 @@
+data_url ='http://....';==data location
+variable = 'ATL_OBS';==variable name/file name
+AtlanticData = ncread(data_url, variable, attribute name);==read attributes
+~or~ 
+AtlanticData = ncread(data_url, variable);== pull over data
+AtlanticUnits = datetime( timeData, ,
