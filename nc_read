@@ -1,6 +1,9 @@
 data_url ='http://....';==data location
-variable = 'ATL_OBS';==variable name/file name
-AtlanticData = ncread(data_url, variable, attribute name);==read attributes
+variable = 'CCHDO_dataset';==variable name/file name
+cchdodata = ncread(data_url, variable, attribute_name);==read attributes
 ~or~ 
-AtlanticData = ncread(data_url, variable);== pull over data
-AtlanticUnits = datetime( timeData, ,
+cchdodata = ncread(data_url, variable);== pull over data
+cchdoUnits = ncreaddatt(data_url, 'variable', 'units'); == read data attributes 
+TimeData = ncread(data_url, 'time', 'units'); == pulling over position?
+Once data is pulled over we can plot it.
+plot(time, cchdodata);
