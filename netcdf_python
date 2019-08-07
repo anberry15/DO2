@@ -17,4 +17,4 @@ print(ds[variable])
 #plot variable's data
 ds[variable].plot()
 #convert to pandas object
-df = ds[variable].to_pandas().to_ frame(name=variable)
+df = ds[variable].to_pandas().to_frame(name=variable)
