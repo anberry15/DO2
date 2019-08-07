@@ -1,0 +1,14 @@
+# load packages we need
+import netCDF4
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import xarray
+import xarray as xr
+import matplotlib.pyplot as plt
+import matplotlib
+
+# point to the data set and applicable package
+nc=xarray.open_dataset('C:/Users/anb0102/Documents/0_pr24_a_nc_ctd/data_test.nc')
+ print (nc.dump)
+data_loc = 'C:\Users\anb0102\Documents\0_pr24_a_nc_ctd\data_test.nc'
