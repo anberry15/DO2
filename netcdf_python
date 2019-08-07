@@ -6,11 +6,15 @@ import xarray
 import xarray as xr
 import matplotlib.pyplot as plt
 import matplotlib
-
-# point to the data set and applicable package
-#nc=xarray.open_dataset('C:/Users/anb0102/Documents/0_pr24_a_nc_ctd/data_test.nc')
-#print (nc.dump)
+#Point to the file
 data_loc = 'C:/Users/anb0102/Documents/0_pr24_a_nc_ctd/data_test.nc'
+#open file with xarray and then print it
 ds = xr.open_dataset(data_loc)
 print(ds)
-
+#choose the variable we want to print
+variable = 'temperature'
+print(ds[variable])
+#plot variable's data
+ds[variable].plot()
+#convert to pandas object
+df = ds[variable].to_pandas().to_ frame(name=variable)
