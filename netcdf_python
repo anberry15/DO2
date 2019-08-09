@@ -6,15 +6,17 @@ import xarray
 import xarray as xr
 import matplotlib.pyplot as plt
 import matplotlib
-#Point to the file
+
+# Point to the file
 data_loc = 'C:/Users/anb0102/Documents/0_pr24_a_nc_ctd/data_test.nc'
-#open file with xarray and then print it
+# open file with xarray and then print it
 ds = xr.open_dataset(data_loc)
 print(ds)
-#choose the variable we want to print
+# choose the variable we want to print
 variable = 'temperature'
 print(ds[variable])
-#plot variable's data
+# plot variable's data
 ds[variable].plot()
-#convert to pandas object
+# convert to pandas object
 df = ds[variable].to_pandas().to_frame(name=variable)
+df.describe(percentiles=[.1, .25, .5, .75, .9])
