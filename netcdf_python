@@ -5,7 +5,7 @@ import seaborn as sns
 import xarray
 import xarray as xr
 import matplotlib.pyplot as plt
-import matplotlib
+
 
 # Point to the file
 data_loc = 'C:/Users/anb0102/Documents/0_pr24_a_nc_ctd/data_test.nc'
@@ -15,8 +15,13 @@ print(ds)
 # choose the variable we want to print
 variable = 'temperature'
 print(ds[variable])
+# choose the variable we want to print
+variable2 = 'woce_date'
+print(ds[variable2])
 # plot variable's data
-ds[variable].plot()
-# convert to pandas object
-df = ds[variable].to_pandas().to_frame(name=variable)
-df.describe(percentiles=[.1, .25, .5, .75, .9])
+ds[variable2].plot()
+plt.show()
+#convert to pandas object
+#df = ds[variable].to_pandas().to_frame(name=variable)
+#df.describe(percentiles=[.1, .25, .5, .75, .9])
+#plt.show()
