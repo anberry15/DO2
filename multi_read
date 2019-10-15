@@ -1,0 +1,15 @@
+import os
+import xarray
+import netCDF4
+
+ccdho_dir = "C:/Users/anb0102/Desktop/cchdo_search_results"
+
+def read_multi_files():
+    print("*****************Start******************")
+    for root_dir_path, sub_dirs, files in os.walk(ccdho_dir):
+        print("Root Directory Path:", root_dir_path)
+        print("Sub Directories", sub_dirs)
+        print("Files", files)
+        print("*" * 30)
+    print("*****************End******************")
+read_multi_files()
